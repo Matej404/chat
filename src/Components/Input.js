@@ -2,6 +2,7 @@ import {Component} from "react";
 import React from "react";
 
 class Input extends Component {
+  
   state = {
     text: ""
   }
@@ -12,24 +13,29 @@ class Input extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+    const inputTrim = this.state.text.trim();
+    if (inputTrim.length < 1) {
+      return;
+    }
+    
+    this.props.onSendMessage(inputTrim);
     this.setState({text: ""});
-    this.props.onSendMessage(this.state.text);
   }
 
   render() {
     return (
-      <div className="Input">
+      <div>
         <form onSubmit={e => this.onSubmit(e)}>
           <input
             onChange={e => this.onChange(e)}
             value={this.state.text}
             type="text"
-            placeholder="Enter your message and press ENTER"
-            autofocus="true"
+            placeholder="Type message"
+            autoFocus={true}
           />
-          <button>Send</button>
+          <button>SEND</button>
         </form>
-      </div>
+        </div>  
     );
   }
 }

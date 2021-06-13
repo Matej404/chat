@@ -1,16 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 45%;
+  margin: 90px auto;
+  background: linear-gradient(to right, rgb(165, 165, 100), rgb(100, 153, 124));
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 75vh;
+  background: rgba(0, 0, 0, 0.575);
+  border-radius: 20px;
 }
 
 .App-header {
-  background-color: #262626;
+  background-color: rgba(0, 0, 0, 0.432);
   overflow: visible;
   width: 100%;
-  text-align: center;
+  height: 75px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 30px;
+}
+
+h1 {
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
 }
 
 .Messages-list {
@@ -51,12 +80,6 @@
   margin: 0 10px -10px;
 }
 
-.Message-content > .username {
-  display: block;
-  color: gray;
-  font-size: 14px;
-  padding-bottom: 4px;
-}
 
 .Message-content > .text {
   padding: 10px;
@@ -72,28 +95,43 @@
   background-color: orangered;
 }
 
+
+
 form {
   display: flex;
   width: 100%;
   justify-content: space-between;
   max-width: 900px;
-  margin: 0 auto 40px;
+  background-color:rgba(0, 0, 0, 0.836);
+  border-radius: 0 0 20px 20px;
+  height: 75px;
+  align-items: center;
 }
 
 input {
   padding: 5px;
   font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid orangered;
+  color: white;
+  border: none;
+  border-radius: 0 0 0 20px;
+  background-color:rgba(0, 0, 0, 0);
   flex-grow: 1;
 }
 
+input:focus-visible {
+  outline: -webkit-focus-ring-color auto 0;
+}
+
 button {
-  padding: 5px 10px;
-  font-size: 16px;
-  background-color: orangered;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: rgb(95, 170, 95);
   color: white;
   border: none;
-  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
   margin-left: 10px;
+  
 }
