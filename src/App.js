@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './style.css';
 import Messages from "./Components/Messages";
 import Input from "./Components/Input"
 import logo from './Img/logo.png';
